@@ -73,9 +73,17 @@
      * Retour : la moyenne calculée
      */
 
-    function average() {
+    function average(myNotes) {
         // CODE HERE !
-
+        let result = 0
+        myNotes.forEach((note) => {
+            result=result+note
+        });
+        let moyenne = result / myNotes.length
+        console.log(moyenne.toFixed(2))
+        return moyenne
+        
+        
     }
     /*
      * Fonction appelée lors du 'clic' sur le bouton
@@ -85,8 +93,29 @@
 
     function refreshAverage() {
         // CODE HERE !
-
+        let newNote = parseInt (document.getElementById("note").value);
+            console.log(newNote)  
+            if (newNote < 0 || newNote > 20){
+           alert ("le nombre saisi n'est pas compris entre 0 et 20")  
+        } else{
+           
+        notes.push(newNote)
+            console.log(notes)
+        
+        let moyenne = average(notes)
+        displayArray (notes)
+        alert("la moyenne de toutes tes notes est " + moyenne)
+        }
+        
+        
     }
+
+    /*let result = 0
+        notes.forEach((note) => {
+            result=result+note
+        });
+        let moyenne = result / notes.length
+        console.log(moyenne.toFixed(2))*/
 
 </script>
 </body>
