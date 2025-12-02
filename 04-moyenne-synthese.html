@@ -73,13 +73,13 @@
      * Retour : la moyenne calculée
      */
 
-    function average(myNotes) {
+    function average(myNote) {
         // CODE HERE !
         let result = 0
-        myNotes.forEach((note) => {
+        myNote.forEach((note) => {
             result=result+note
         });
-        let moyenne = result / myNotes.length
+        let moyenne = result / myNote.length
         console.log(moyenne.toFixed(2))
         return moyenne
         
