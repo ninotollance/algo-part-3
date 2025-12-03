@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>exo 5</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>exo 5</h1>
-    
-</body>
+    <p>générer un nombre aleatoire entre 0 et 100 (Math.random())</p>
+    <p>tester si le nombre généré est divisible pat [7] mais pas par [2]</p>
+    <p>
+      si ok message et fin (dire le nombre généré et le nombres de tirages
+      aléatoire)
+    </p>
+    <p>sinon on recommence</p>
+
+    <script>
+      // CODE HERE //
+      let t = 0;
+      let random;
+      do {
+        random = Math.round(Math.random() * 100);
+        console.log(random);
+        t++;
+        if (random % 7 == 0 && random % 2 != 0) {
+          break;
+        }
+      } while (true);
+      console.log("le nombre de tour est " + t);
+      alert("le nombre " + random + " a été trouvé en " + t + " tirages");
+        
+    </script>
+  </body>
 </html>
